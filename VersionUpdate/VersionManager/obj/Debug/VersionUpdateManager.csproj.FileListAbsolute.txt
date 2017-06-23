@@ -10,3 +10,5 @@ E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\WinSCPnet
 E:\创业学习\版本升级器\VersionUpdate\VersionManager\obj\Debug\VersionUpdateManager.Credential.resources
 E:\创业学习\版本升级器\VersionUpdate\VersionManager\obj\Debug\VersionUpdateManager.Form1.resources
 E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\WinSCP.exe
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\System.Net.Http.dll
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\System.Net.Http.xml

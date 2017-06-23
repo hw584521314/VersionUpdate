@@ -4,3 +4,5 @@ E:\创业学习\版本升级器\VersionUpdate\VersionUpdate\obj\Debug\VersionUpd
 E:\创业学习\版本升级器\VersionUpdate\VersionUpdate\obj\Debug\VersionUpdate.pdb
 E:\创业学习\版本升级器\VersionUpdate\VersionUpdate\obj\Debug\VersionUpdateTool.csprojResolveAssemblyReference.cache
 E:\创业学习\版本升级器\VersionUpdate\VersionUpdate\bin\Debug\VersionUpdateConfig.xml
+E:\创业学习\版本升级器\VersionUpdate\VersionUpdate\bin\Debug\System.Net.Http.dll
+E:\创业学习\版本升级器\VersionUpdate\VersionUpdate\bin\Debug\System.Net.Http.xml
