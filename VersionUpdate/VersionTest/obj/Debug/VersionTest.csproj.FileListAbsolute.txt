@@ -1,0 +1,9 @@
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\obj\Debug\VersionTest.csprojResolveAssemblyReference.cache
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\VersionTest.exe.config
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\VersionTest.exe
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\VersionTest.pdb
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\VersionUpdate.dll
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\VersionUpdate.pdb
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\obj\Debug\VersionTest.exe
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\obj\Debug\VersionTest.pdb
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\VersionUpdateConfig.xml

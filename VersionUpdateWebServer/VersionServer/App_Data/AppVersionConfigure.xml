@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Update>
+<Applications>
+  <App>
+    <Name>VersionTest</Name>
+    <NewestVersion>2.0</NewestVersion>
+  </App>
+</Applications>
+<Configurations>
+  <Configuration>
+    <AppName>VersionTest</AppName>
+    <Version>2.0</Version>
+    <FileListURL>/V02/fileList.txt</FileListURL>
+    <FTPURL>192.168.5.100</FTPURL>
+  </Configuration>
+  <Configuration>
+    <AppName>VersionTest</AppName>
+    <Version>1.0</Version>
+    <FileListURL>/V01/fileList.txt</FileListURL>
+    <FTPURL>192.168.5.100</FTPURL>
+  </Configuration>
+</Configurations>
+</Update>

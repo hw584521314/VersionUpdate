@@ -1,0 +1,8 @@
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\VersionManager.exe.config
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\VersionManager.exe
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\VersionManager.pdb
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\obj\Debug\VersionManager.csprojResolveAssemblyReference.cache
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\obj\Debug\VersionManager.Properties.Resources.resources
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\obj\Debug\VersionManager.csproj.GenerateResource.Cache
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\obj\Debug\VersionManager.exe
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\obj\Debug\VersionManager.pdb

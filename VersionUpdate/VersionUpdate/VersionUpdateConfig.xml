@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configurations>
+  <WebAPIURL>http://39.108.171.23/api/CheckUpdate</WebAPIURL>
+</configurations>

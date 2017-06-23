@@ -1,0 +1,11 @@
+版本升级器。
+流程：
+1.主程序启动，调用版本升级器的dll中的一个接口:CheckUpdate
+CheckUpdate中，读取版本升级器的xml配置文件，得到应该访问的web service。然后调用web Service接口。得到返回值。若离线或者访问超时，直接返回false。
+在web serivice中，传递的参数是当前主程序的程序名和版本号。web service检查该程序名的版本历史，根据规则，返回true 或者false。简单地说，如果web service检测到服务器上登记的版本更高，则返回true。同时返回另一个web service的URL。
+2.若返回true，则表示需要升级，这时，主程序调用版本升级器提供的一个接口：StartUpdate。然后主程序自己结束，退出。
+在StartUpdate的参数为主程序的pid。StartUpdate首先启动版本升级器exe程序。脱离父子进程关系。
+在版本升级exe程序中，首先检查pid是否还未结束。如果未结束，则强制其结束。等待其结束。然后，将前一个web service得到URL得到，并访问，得到应该获取的filelist的web service。然后调用该web service。
+得到了最新的文件列表（含文件名+文件最后修改时间信息）。同时得到FTP服务器地址。
+3.版本升级器检查应用本身的目录下的文件同得到的文件列表进行比对。如果发现服务器上文件更新，则使用服务器上的文件进行替换。若本地没有服务器上的文件，则本地下载服务器上的文件
+
