@@ -68,6 +68,7 @@ namespace VersionUpdateManager
             if (tickCount>10)
             {//等待主程序超时
                 MessageBox.Show("等待主程序退出超时");
+                Program.log.Error("等待主程序退出超时，VersionManager退出");
                 timer1.Enabled = false;
                 Application.Exit();
                 return;
@@ -77,11 +78,14 @@ namespace VersionUpdateManager
                 status.Text = "等待主程序退出" + new string('.', tickNumber);
             }
             else
-            {   //已经没有进程了，关闭定时器
+            {
+                status.Text = "主程序已退出";
+                //已经没有进程了，关闭定时器
                 timer1.Enabled = false;
                 //使能面板
                 panel1.Enabled = true;
                 //异步调用fileList处理流程
+                Program.log.Info("主程序已退出，开始比较文件");
                 status.BeginInvoke(new Action(CompareFileList));
             }
         }
@@ -92,16 +96,22 @@ namespace VersionUpdateManager
             Credential credForm = new Credential();
             if (credForm.ShowDialog() == DialogResult.Cancel)
             {
+                Program.log.Info("点击取消更新，VersionManager退出");
                 return;
             }
             userName = credForm._userName;
             password = credForm._password;
+            Program.log.Info("FTP用户名为："+userName);
+
             string fileListOnLocalPath = Application.StartupPath+@"\";
+            Program.log.Info("fileList文件的本地路径为："+ fileListOnLocalPath);
             string tmpFileListPath = fileListPath.Replace('\\', '/');
             string fileListOnLocalFile = Application.StartupPath + tmpFileListPath.Substring(tmpFileListPath.LastIndexOf('/'));
+            Program.log.Info("fileList文件的本地文件为：" + fileListOnLocalFile);
             //获取fileList
             if (GetFile(ftpServer, fileListPath, fileListOnLocalPath, userName, password)==false)
             {
+                Program.log.Info("获取FTP服务器上"+ fileListPath + "文件失败，VersionManager退出");
                 MessageBox.Show("无法获取更新文件列表");
                 //启动原来的程序
                 Process tmpProcess = new Process();
@@ -111,14 +121,16 @@ namespace VersionUpdateManager
                 Application.Exit();
                 return;
             }
-           
-            
+            Program.log.Info("成功获取FTP服务器上的fileList文件");
+
+
             //否则，开始解析文件列表
             string[] lines = File.ReadAllLines(fileListOnLocalFile);
             string tmpFile, tmpDatetime;
             remoteFileList.Clear();
             updateFileList.Clear();
             relatedRootFolder = lines[0];//第一行为指定rootPath根目录
+            Program.log.Info("Root路径为：" + relatedRootFolder);
             for (int i=1;i<lines.Count();i++) 
             {
                 string eachLine = lines[i];
@@ -197,7 +209,7 @@ namespace VersionUpdateManager
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error: {0}", e);
+                Program.log.Error("GetFile:"+e.Message);
                 return false;
             }
         }
@@ -220,11 +232,13 @@ namespace VersionUpdateManager
             progressBar1.Maximum = totalCount;
             progressBar1.Minimum = 0;
             progressBar1.Value = 1;
-
+            string tmpStr = "";
             for (int i=0;i<totalCount;i++)
             {//开始从FTP下载文件了
                 string fileName = checkedListBox1.Items[i].ToString();
+                //剔除掉FTP下的文件夹结构，用于本地当对路径。
                 string relateFilePath = fileName.Replace(relatedRootFolder, "");
+                //构造本地绝对路径
                 string fileLocalPath = Application.StartupPath + relateFilePath.Substring(0, relateFilePath.LastIndexOf('\\'))+@"\";
               
                 if (Directory.Exists(fileLocalPath)==false)
@@ -232,13 +246,16 @@ namespace VersionUpdateManager
                     Directory.CreateDirectory(fileLocalPath);
                 }
                 if (GetFile(ftpServer, fileName, fileLocalPath, userName, password)==true)
-                {               
-                    
-                    logWin.Items.Add(string.Format("{0} 更新成功\r\n", fileName));
+                {
+                    tmpStr = string.Format("{0} 更新成功\r\n", fileName);
+                    logWin.Items.Add(tmpStr);
+                    Program.log.Info(tmpStr);
                 }
                 else
                 {
-                    logWin.Items.Add(string.Format("{0} 更新失败\r\n", fileName));
+                    tmpStr = string.Format("{0} 更新失败\r\n", fileName);
+                    logWin.Items.Add(tmpStr);
+                    Program.log.Error(tmpStr);
                 }
                 //更新进度条
                 progressBar1.Value = i+1;
@@ -250,6 +267,7 @@ namespace VersionUpdateManager
             //检查启动程序选项的状态：
             if(isAutoStart.Checked==true)
             {
+                Program.log.Info("启动主程序" + Program.exePath);
                 //启动原来的程序
                 Process tmpProcess = new Process();
                 tmpProcess.StartInfo.FileName = Program.exePath;

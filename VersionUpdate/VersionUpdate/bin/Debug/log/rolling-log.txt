@@ -1,0 +1,6 @@
+[Header]
+2017-06-26 18:39:52,225 [1] INFO  VersionUpdate.VersionUpdateTool [(null)] - appName=VersionTest currentVersion=2.0.0.0
+2017-06-26 18:39:52,251 [1] INFO  VersionUpdate.VersionUpdateTool [(null)] - WebAPI的URL为：http://39.108.171.23/api/CheckUpdate?appName=VersionTest&currentVersion=2.0.0.0
+[Header]
+2017-06-26 18:41:12,894 [1] INFO  VersionUpdate.VersionUpdateTool [(null)] - appName=VersionTest currentVersion=2.0.0.0
+2017-06-26 18:41:12,923 [1] INFO  VersionUpdate.VersionUpdateTool [(null)] - WebAPI的URL为：http://39.108.171.23/api/CheckUpdate?appName=VersionTest&currentVersion=2.0.0.0

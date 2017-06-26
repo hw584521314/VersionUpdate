@@ -9,3 +9,7 @@ E:\创业学习\版本升级器\VersionUpdate\VersionTest\obj\Debug\VersionTest.
 E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\VersionUpdateConfig.xml
 E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\System.Net.Http.dll
 E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\System.Net.Http.xml
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\log4net.dll
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\log4net.pdb
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\log4net.xml
+E:\创业学习\版本升级器\VersionUpdate\VersionTest\bin\Debug\log4net.config

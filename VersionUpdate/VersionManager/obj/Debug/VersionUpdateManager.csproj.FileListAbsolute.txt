@@ -12,3 +12,7 @@ E:\创业学习\版本升级器\VersionUpdate\VersionManager\obj\Debug\VersionUp
 E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\WinSCP.exe
 E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\System.Net.Http.dll
 E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\System.Net.Http.xml
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\log4net.config
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\log4net.dll
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\log4net.pdb
+E:\创业学习\版本升级器\VersionUpdate\VersionManager\bin\Debug\log4net.xml

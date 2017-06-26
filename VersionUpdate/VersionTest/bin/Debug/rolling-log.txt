@@ -1,0 +1,4 @@
+[Header]
+2017-06-26 16:36:02,829 [8] INFO  VersionTest.Program [(null)] - this is a test
+[Header]
+2017-06-26 16:54:43,071 [9] INFO  VersionTest.Program [(null)] - this is a test

@@ -1,0 +1,10 @@
+[Header]
+2017-06-26 16:32:57,362 [9] INFO  VersionTest.Program [(null)] <(null)> - this is a test
+[Header]
+2017-06-26 16:36:02,829 [8] INFO  VersionTest.Program [(null)] <(null)> - this is a test
+2017-06-26 16:36:12,184 [8] INFO  VersionUpdate.VersionUpdateTool [(null)] <(null)> - appName=VersionTest currentVersion=2.0.0.0
+2017-06-26 16:36:12,185 [8] INFO  VersionUpdate.VersionUpdateTool [(null)] <(null)> - WebAPI的URL为：http://39.108.171.23/api/CheckUpdate?appName=VersionTest&currentVersion=2.0.0.0
+[Header]
+2017-06-26 16:54:43,071 [9] INFO  VersionTest.Program [(null)] <(null)> - this is a test
+2017-06-26 16:54:52,818 [9] INFO  VersionUpdate.VersionUpdateTool [(null)] <(null)> - appName=VersionTest currentVersion=2.0.0.0
+2017-06-26 16:54:52,820 [9] INFO  VersionUpdate.VersionUpdateTool [(null)] <(null)> - WebAPI的URL为：http://39.108.171.23/api/CheckUpdate?appName=VersionTest&currentVersion=2.0.0.0

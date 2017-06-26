@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using VersionUpdate;
+using log4net;
+using log4net.Config;
+
 
 namespace VersionTest
 {
@@ -13,6 +16,7 @@ namespace VersionTest
     {
         static void Main(string[] args)
         {
+   
             VersionUpdateTool tmpTool = new VersionUpdateTool();
             try
             {
